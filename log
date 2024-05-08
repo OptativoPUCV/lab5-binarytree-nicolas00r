@@ -37,3 +37,14 @@ Wed 08 May 2024 07:22:47 PM UTC:
  tests:  8|7
 total_score: 5/70
 c3c461b
+Wed 08 May 2024 07:25:30 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:82:19: error: implicit declaration of function ‘lower_than’ [-Werror=implicit-function-declaration]
+   82 |         } else if(lower_than(key, aux->pair->key) == 1){
+      |                   ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+234aa98
