@@ -141,10 +141,12 @@ Pair * upperBound(TreeMap * tree, void* key) {
             tree->current = ubNode;
             break;
         } else if(tree->lower_than(key, ubNode->pair->key) == 1){
-            if(ubNode->left == NULL) break;
+            if(ubNode->left == NULL || tree->lower_than(ubNode->left->pair->key, key) == 1) 
+                break;
             ubNode = ubNode->left;
         } else{
-            if(ubNode->right == NULL) break;
+            if(ubNode->right == NULL) 
+                return NULL;
             ubNode = ubNode->right;
         }
     }
