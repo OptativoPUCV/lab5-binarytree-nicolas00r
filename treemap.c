@@ -143,5 +143,13 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+    TreeNode *aux = tree->current;
+
+    if(aux->right != NULL){
+        aux = minimum(aux);
+    } else{
+        while(aux->parent != NULL && tree->lower_than(aux->parent->pair->key, aux->pair->key) == 1)
+            aux = aux->parent;
+    }
+    return aux->pair;
 }
