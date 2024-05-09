@@ -197,3 +197,9 @@ treemap.c:53:32: error: expected ‘;’ before ‘return’
       |         ~~~~~~                  
 Compilation failed
 ad7ae68
+Thu 09 May 2024 08:29:47 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  29|0
+total_score: 70/70
+aa8313f
