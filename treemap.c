@@ -149,7 +149,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         aux = aux->right;
         aux = minimum(aux);
     } else{
-        while(1){
+        while(aux->parent != NULL){
             if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1){
                 return aux->parent->pair;
             }
